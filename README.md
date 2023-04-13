@@ -1,46 +1,62 @@
-# Getting Started with Create React App
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+## Tech Stack
 
-## Available Scripts
+**Client:** React, TypeScript, and React-Router-DOM
 
-In the project directory, you can run:
+## Instalation:
+```bash
+  npx create-react-app
+```
 
-### `npm start`
+## Utilization
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
+This project is a fictional e-commerce store that sells coffee.
 
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
+## Features
+- Shopping cart feature in which the user is able to add and delete its chosen coffee types.
+- Form validation.
+- When a coffee is put on the cart, an icon pops up on the navbar cart button indicating that an item was added to the cart.
+- When the user submits the payment form, he is redirected to the delivery page, where it is displayed the information that he had previously put in the form.
 
-### `npm test`
+## File Structure
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+### 1. src/pages/hero
+- Hero section of the webpage.
+ 
+### 2. src/pages/shop/shop
+- Inside this folder we can find the section of the website that loops through our API located in the front-end. As it is being looped, we are passing as props the coffee API to the "Product" component. 
 
-### `npm run build`
+### 3. src/pages/shop/product
+- The component that is being looped by the "Shop" component. Here, the information displayed is being received as props through its parent. Inside this file the user is able to add or remove items from his cart.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+### 4. src/pages/cart/cart
+- This section is conditionally rendered in such a way that if the user has not selected any items to his cart, it will show a message "Your cart is empty". Otherwise, the items chosen by the user will be looped and the state will be passed as props to the "CartProduct" component. As a result, the items selected by the user will be displayed in this section of the website.
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+### 5. src/pages/cart/cart-content
+- The component that is being looped by the "Cart" component. Here, the information displayed is being received as props through its parent. Inside this file the user is able to add or remove items from his cart.
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+### 6. src/pages/cart/payment
+- Contains the form component which includes form validation.
 
-### `npm run eject`
+### 7. src/pages/cart/checkout
+- The page that the user is redirected to after he submits the form
 
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
+### 8. src/components
+- Stores components that are shared between all of the application, in this case it is just the navbar
 
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
+### 9. src/hooks
+- Where it is located the functions and state variables that are shared throughout the application. 
 
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
 
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
+ ## React Hooks:
+ - useContext
+ - createContext
+- useLocation
+- useState
+- useEffect
 
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
+## Dependencies:
+- axios
+- react-router-dom
+- react-scroll
+- react-hook-form

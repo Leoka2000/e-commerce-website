@@ -1,0 +1,238 @@
+.payment-section {
+    margin-top: 2.5rem;
+width: 100%;
+display: flex;
+justify-content: center;
+align-items: center;
+text-align: start;
+}
+.header-text > h4 {
+    color: rgb(39, 34, 33);
+}
+.header-text > p {
+    color: rgb(141, 134, 134)
+}
+.payment-header > svg {
+    color: #DA9F5B;
+    font-size: 2rem;
+}
+.payment-parent {
+    width: 100%;
+max-width: 40rem;
+margin-top: 1rem;
+margin-bottom: 0.75rem;
+padding: 2.5rem;
+border-radius: 6px;
+background: rgb(243, 242, 242)
+}
+.payment-header {
+    display: flex;
+gap: 0.5rem;
+margin-bottom: 1.5rem;
+align-items: center;
+}
+.header-text {
+    gap: 0.1rem;
+    display: flex;
+    flex-direction: column;
+   
+}
+.header-text > h4 {
+    font-weight: 500;
+}
+.input-wrapper-parent {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem; 
+
+/* IMPORTANTE GAP */
+}
+.input-wrapper-child {
+    display: flex;
+    gap: 0.75rem;
+}
+.input-wrapper-child > div {
+  width: 50%;
+}
+
+.input-wrapper-child > div > input, .input-wrapper-parent > input {
+font-size: 0.875rem;
+background: center;
+outline: 0px;
+height: 100%;
+padding: 0px 0.75rem;
+color: rgb(87, 79, 77);
+border-radius: 4px;
+border: 1px solid rgb(230, 229, 229);
+background: rgb(237, 237, 237);
+overflow: hidden;
+height: 3rem;
+}
+.input-wrapper-child > div {
+display: flex;
+flex-direction: column;
+}
+.error {
+    
+        margin: 0;
+        padding: 0;
+        margin-bottom: 0.5rem;
+        color: red;
+        font-size: 12px;
+      }
+
+      .btn-submit {
+        font-size: 0.875rem;
+        margin-top: 4rem;
+background: center;
+outline: 0px;
+height: 100%;
+padding: 0px 0.75rem;
+color: rgb(0, 0, 0);
+border-radius: 4px;
+border: 1px solid #ffffff;
+background: #DA9F5B;
+overflow: hidden;
+height: 3rem;
+cursor: pointer;
+      }
+
+      @media screen and (max-width: 1024px) {
+  
+        .payment-parent {
+            width: 90%;
+        }
+    }
+.input-wrapper-child > div {
+  width: 100%;
+}
+    /* CREDIT CARD CSS */
+
+    .credit-card-parent {
+        max-width: 40rem;
+    width: 100%;
+    padding: 3rem 0rem 3rem 0rem;
+    border-radius: 6px;
+    background: rgb(243, 242, 242);
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    margin-top: 2rem;
+    }
+    .header-credit {
+      display: flex;
+      gap: 0.75rem;
+      align-items: center;
+      border-top: 2px solid rgb(230, 229, 229);
+      padding-bottom: 2rem;
+      padding-top: 2rem;
+      
+    }
+    .header-credit > span > svg {
+      color: #DA9F5B;
+      font-size: 2rem;
+    }
+    .header-column > h4 {
+      color: rgb(39, 34, 33);
+    }
+    .header-column > p {
+      color: rgb(141, 134, 134);
+    }
+    .input-wrapper > p {
+        font-size: 0.875rem;
+        font-family: "Roboto", sans-serif;
+    color: rgb(87, 79, 77);
+    font-weight: 200;
+    
+    }
+    .input-wrapper > span > svg {
+        font-size: 20px;
+        color: #DA9F5B
+       
+    }
+    
+    .main-credit {
+      padding: 3rem 0 3rem 0;
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+      border-bottom: 2px solid rgb(230, 229, 229);
+     
+    }
+    .main-credit-child {
+      display: flex;
+      justify-content: space-between;
+    }
+    
+    .main-credit-child > h4 {
+      color: rgb(64, 57, 55);
+    }
+    .main-credit-child > p {
+      color: rgb(87, 79, 77);
+    }
+    
+    
+    .input-parent {
+        display: flex;
+        padding-top: 2rem;
+        gap: 1rem;
+        justify-content: space-between;
+       
+        
+       
+    }
+    .input-wrapper {
+      align-items: center;
+      background-color: rgba(185, 185, 185, 0.26);
+      border: 1px solid #DFDFDF;
+      border-radius: 4px;
+      box-sizing: border-box;
+      color: #000000;
+      cursor: pointer;
+      display: flex;
+      font-family: Inter, sans-serif;
+      font-size: 7px;
+      justify-content: center;
+      text-decoration: none;
+      transition: all .2s;
+      user-select: none;
+      -webkit-user-select: none;
+      touch-action: manipulation;
+      width: 10rem;
+      height: 3.5rem;
+      display: flex;
+      align-items: center;
+      display: flex;
+      gap: 0.70rem;
+    
+    
+    }
+    
+    .input-wrapper:active,
+    .input-wrapper:focus,
+    .input-wrapper:hover {
+      outline: 0;
+      background-color: #FFFFFF;
+      border-color: rgba(0, 0, 0, 0.19);
+    }
+    
+    .input-wrapper:hover {
+      background-color: #FFFFFF;
+      border-color: rgba(0, 0, 0, 0.19);
+    }
+    
+    @media only screen and (max-width: 1024px) {
+  
+        .input-wrapper-child {
+           display: flex;
+           flex-direction: column;
+        } 
+        .input-parent {
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+        }
+        .input-wrapper {
+            width: 100%;
+        }
+      }     

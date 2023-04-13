@@ -1,0 +1,79 @@
+.checkout-section {
+    padding: 10rem 8rem 5rem 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.checkout-left {
+   
+    display: flex;
+    flex-direction: column;
+
+}
+.checkout-header {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding-bottom: 3rem;
+}
+.checkout-header > h1 {
+    color: rgb(196, 127, 23);
+    font-size: 3rem;
+    font-weight: bolder;
+  
+}
+.checkout-header > p {
+    color: rgb(64, 57, 55);
+}
+.checkout-main {
+width: 31rem;
+display: flex;
+flex-direction: column;
+gap: 2rem;
+padding: 2.5rem;
+border: 1px solid rgb(196, 127, 23);
+border-radius: 6px 36px;
+}
+
+.individual-wrapper {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+}
+.individual-wrapper > div > p{
+    display: flex;
+    gap: 0.25rem;
+}
+.individual-wrapper > svg {
+  font-size: 1.5rem;
+  color: rgb(255, 255, 255);
+  padding: 0.4rem;
+  border-radius: 100%;
+}
+#id-1{
+    background-color: rgb(196, 127, 23);
+}
+#id-2{
+    background-color: rgb(117, 49, 49);
+}
+#id-3{
+    background-color: rgb(219, 172, 44);
+}
+.individual-wrapper > div {
+    display: flex;
+    flex-direction: column;
+    gap: 0.3rem;
+    
+}
+.checkout-right {
+    padding-top: 7rem;
+}
+.individual-wrapper > div > p {
+    color: rgb(87, 79, 77);
+}
+@media screen and (max-width: 1100px) {
+    .checkout-right {
+       display: none;
+    }
+}

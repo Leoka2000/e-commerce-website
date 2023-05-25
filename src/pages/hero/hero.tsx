@@ -6,11 +6,11 @@ const Hero = () => {
   return (
     <div id='hero' className='hero-section'>
       <div className='hero-content-wrapper'>
-        <h3>We have seen serving</h3>
-        <h1>Coffee</h1>
-        <h4>*Since 1950*</h4>
+        <h3>Szolgálunk fel</h3>
+        <h1>KÁVÉT</h1>
+        <h4>*1442 óta*</h4>
         <LinkRoll to="shop" spy={true} smooth={true} offset={-100} duration={500}>
-          <button className='addToCartBttn'>Shop now</button>
+          <button className='addToCartBttn'>Most vásárolj!</button>
         </LinkRoll>
       </div>
     </div>

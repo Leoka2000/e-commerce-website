@@ -5,12 +5,19 @@ display: flex;
 justify-content: center;
 align-items: center;
 text-align: start;
+
 }
+
 .header-text > h4 {
     color: rgb(39, 34, 33);
+    font-family: "Roboto", sans-serif;
+    margin-bottom: 0.2rem;
+    font-size: 1rem;
 }
 .header-text > p {
-    color: rgb(141, 134, 134)
+    color: rgb(141, 134, 134);
+    font-family: "Roboto", sans-serif;
+    line-height: 1rem;
 }
 .payment-header > svg {
     color: #DA9F5B;
@@ -18,12 +25,14 @@ text-align: start;
 }
 .payment-parent {
     width: 100%;
+    border: #e9e9e9 1px solid;
 max-width: 40rem;
 margin-top: 1rem;
 margin-bottom: 0.75rem;
 padding: 2.5rem;
 border-radius: 6px;
 background: rgb(243, 242, 242)
+
 }
 .payment-header {
     display: flex;
@@ -32,14 +41,12 @@ margin-bottom: 1.5rem;
 align-items: center;
 }
 .header-text {
-    gap: 0.1rem;
+  
     display: flex;
     flex-direction: column;
    
 }
-.header-text > h4 {
-    font-weight: 500;
-}
+
 .input-wrapper-parent {
     display: flex;
     flex-direction: column;
@@ -58,6 +65,7 @@ align-items: center;
 .input-wrapper-child > div > input, .input-wrapper-parent > input {
 font-size: 0.875rem;
 background: center;
+font-family: "Roboto", sans-serif;
 outline: 0px;
 height: 100%;
 padding: 0px 0.75rem;
@@ -73,7 +81,7 @@ display: flex;
 flex-direction: column;
 }
 .error {
-    
+  font-family: "Roboto", sans-serif;
         margin: 0;
         padding: 0;
         margin-bottom: 0.5rem;
@@ -82,19 +90,24 @@ flex-direction: column;
       }
 
       .btn-submit {
-        font-size: 0.875rem;
+        font-size: 1rem;
+        font-family: "baloo 2", sans-serif;
         margin-top: 4rem;
 background: center;
 outline: 0px;
 height: 100%;
 padding: 0px 0.75rem;
-color: rgb(0, 0, 0);
+color: rgb(233, 233, 233);
 border-radius: 4px;
 border: 1px solid #ffffff;
 background: #DA9F5B;
 overflow: hidden;
 height: 3rem;
 cursor: pointer;
+transition: 0.2s;
+      }
+      .btn-submit:hover {
+        background: #a07340;
       }
 
       @media screen and (max-width: 1024px) {
@@ -134,9 +147,11 @@ cursor: pointer;
     }
     .header-column > h4 {
       color: rgb(39, 34, 33);
+      font-family: "Roboto", sans-serif;
     }
     .header-column > p {
       color: rgb(141, 134, 134);
+      font-family: "Roboto", sans-serif;
     }
     .input-wrapper > p {
         font-size: 0.875rem;
@@ -166,9 +181,11 @@ cursor: pointer;
     
     .main-credit-child > h4 {
       color: rgb(64, 57, 55);
+      font-family: "Roboto", sans-serif;
     }
     .main-credit-child > p {
       color: rgb(87, 79, 77);
+      font-family: "Roboto", sans-serif;
     }
     
     
@@ -176,6 +193,7 @@ cursor: pointer;
         display: flex;
         padding-top: 2rem;
         gap: 1rem;
+      
         justify-content: space-between;
        
         
@@ -200,12 +218,16 @@ cursor: pointer;
       touch-action: manipulation;
       width: 10rem;
       height: 3.5rem;
+      
       display: flex;
       align-items: center;
       display: flex;
       gap: 0.70rem;
     
     
+    }
+    .input-wrapper > p {
+      font-family: "Roboto", sans-serif;
     }
     
     .input-wrapper:active,

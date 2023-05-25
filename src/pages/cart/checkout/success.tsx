@@ -27,22 +27,22 @@ const Success = () => {
           <div className='individual-wrapper'>
            <CiLocationOn id='id-1'/>
             <div>
-              <p>Kiszállítva  <strong> {state.data.addressName}, {state.data.addressNumber}</strong></p>
-              <p>Brazilia - UF</p>
+              <p>Kiszállítva  {state.data.addressName}, {state.data.addressNumber}</p>
+              <p >Brazilia - UF</p>
             </div>
           </div>
           <div className='individual-wrapper'>
           <BiTimer id='id-2'/>
             <div>
               <p>Előrejelzett szállítás</p>
-              <p><strong>20 min - 30 min</strong></p>
+              <p>20 min - 30 min</p>
             </div>
           </div>
           <div className='individual-wrapper'>
             <AiOutlineEuroCircle id='id-3'/>
             <div>
               <p>Fizetés opciója</p>
-              <p><strong>{state.data.card}</strong></p>
+              <p>{state.data.card}</p>
             </div>
           </div>
         </main>

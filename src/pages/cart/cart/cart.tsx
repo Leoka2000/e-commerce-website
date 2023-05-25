@@ -14,9 +14,9 @@ export const Cart = () => {
      
       <div className="cart-wrapper">
         <div className="card-main-title">
-          <h1>Your Shopping cart</h1>
+          <h1>A te bevásárlókosarad</h1>
         </div>
-        {typeof cartItems !== 'undefined' ? (
+      
           <div className="cart-child">
             {PRODUCTS.map((product) => {
               if (cartItems[product.id] !== 0) {
@@ -24,16 +24,14 @@ export const Cart = () => {
               }
             })}
           </div>
-        ) : (
-          ''
-        )}
+        
 
         {totalAmount > 0 ? (
           <section className="payment-section">
            <Payment/>
           </section>
         ) : (
-          <h1>Your shopping cart is empty</h1>
+          <h1>A bevásárlókosarad üres</h1>
         )}
       </div>
     </>

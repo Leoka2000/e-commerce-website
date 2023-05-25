@@ -1,8 +1,8 @@
 import React, { useContext } from 'react';
 import '../../cart/cart.css';
 import { ShopContext, ContextProps } from '../../../../hooks/shop-context';
-import { AiOutlinePlusCircle } from 'react-icons/ai';
-import { AiOutlineMinusCircle } from 'react-icons/ai';
+import { AiOutlinePlus} from 'react-icons/ai';
+import { AiOutlineMinus } from 'react-icons/ai';
 
 interface Props {
   data: {
@@ -15,10 +15,15 @@ interface Props {
 }
 
 export const CartProduct: React.FC<Props> = (props: Props) => {
-  const { id, productName, price, productImage, roast } = props.data; 
+  const { id, productName, price, productImage, roast } = props.data;
   const { cartItems, addToCart, removeFromCart, updateCartItemCount } = useContext<ContextProps>(ShopContext);
 
+  const shouldRender = Object.values(cartItems).every(item => item >= 0);
 
+  if (!shouldRender) {
+    return null; // Render nothing if any item is less than 0
+  }
+console.log(cartItems)
   return (
     <div className='cart-parent-wrapper'>
       <div className='left'>
@@ -39,30 +44,21 @@ export const CartProduct: React.FC<Props> = (props: Props) => {
           <small>HUF</small>
           <p className='price'>{price}</p>
         </div>
-        <div className="countHandler-button-wrapper">
-          {typeof id !== "undefined" ? (
-            <button className='red-button' onClick={() => removeFromCart(id)}>
-              <AiOutlineMinusCircle />
-            </button>
-          ) : (
-            ""
-          )}
-          {typeof cartItems !== "undefined" ? (
-            <input
-              className='inp'
-              value={cartItems[id]}
-              onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
-            />
-          ) : (
-            ""
-          )}
-          {typeof id !== "undefined" ? (
-            <button className='green-button' onClick={() => addToCart(id)}>
-              <AiOutlinePlusCircle />
-            </button>
-          ) : (
-            ""
-          )}
+        <div className="button-wrapper">
+
+          <button className='red-button' onClick={() => removeFromCart(id)}>
+            <AiOutlineMinus />
+          </button>
+
+          <input
+
+            value={cartItems[id]}
+            onChange={(e) => updateCartItemCount(Number(e.target.value), id)}
+          />
+          <button className='green-button' onClick={() => addToCart(id)}>
+            <AiOutlinePlus />
+          </button>
+
         </div>
       </div>
     </div>

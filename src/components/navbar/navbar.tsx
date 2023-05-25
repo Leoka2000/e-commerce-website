@@ -1,6 +1,6 @@
 import React, { useState, useEffect, useContext } from 'react';
 import './navbar.css';
-import { Link } from 'react-router-dom';
+import { Link, useLocation } from 'react-router-dom';
 import { BsFillCartFill } from 'react-icons/bs';
 import { ShopContext, ContextProps } from '../../hooks/shop-context';
 import {BsExclamationCircleFill} from 'react-icons/bs'
@@ -9,6 +9,9 @@ import {BsExclamationCircleFill} from 'react-icons/bs'
 const Navbar = () => {
   const [navbar, setNavbar] = useState<boolean>(true);
   const { cartItems, getTotalCartAmount } = useContext<ContextProps>(ShopContext);
+
+  const location = useLocation();
+  console.log(location.pathname)
 
   const cartHasItems = Object.values(cartItems).some((value) => value > 0);
 
@@ -29,17 +32,17 @@ const Navbar = () => {
 
   return (
     <>
-      <nav className={navbar ? 'main-nav' : 'activated'}>
+      <nav className='activated'>
         <div className='title-wrapper'>
         <Link style={{ textDecoration: 'none' }} to='/'>
-            <h2>Leo's Coffee</h2>
+            <h2>Leo Kávé</h2>
             </Link>
         </div>
-        <ul>
+      
           <Link style={{ textDecoration: 'none' }} to='/cart'>
-          CART <BsFillCartFill/>{cartHasItems && <span><BsExclamationCircleFill id='exclamation'/></span>}
+          KOSÁR <BsFillCartFill/>{cartHasItems && <span><BsExclamationCircleFill id='exclamation'/></span>}
            </Link>
-        </ul>
+       
       </nav>
     </>
   );

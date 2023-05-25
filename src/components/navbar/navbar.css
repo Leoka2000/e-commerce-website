@@ -14,6 +14,7 @@
 
 .title-wrapper {
     font-size: 1.8rem;
+  
 }
 
 #exclamation {
@@ -24,11 +25,13 @@ font-size: 1.7rem;
 }
 .title-wrapper > a {
     color: #da9f5b;
+ 
     
 }
 .title-wrapper > a > h2 {
     transition: 0.3s;
     cursor: pointer;
+    font-family: "baloo 2", sans-serif;
 }
 .title-wrapper > a > h2:hover {
 color: brown;
@@ -40,14 +43,15 @@ color: brown;
     
   
 }
-.main-nav > ul > a {
+.main-nav > a {
     background-color: #da9f5b;
     position: relative;
     display: flex;
     justify-content: center;
     height: 100%;
     width: 100%;
-
+    margin-right: 2rem;
+    font-family: "baloo 2", sans-serif;
 border-radius: .25rem;
 box-sizing: border-box;
 align-items: center;
@@ -72,7 +76,7 @@ transition: 0.3s;
     color: white;
 }
 
-ul > a:hover {
+.activated > a:hover, .main-nav > a:hover {
     transform: scale(1.1);
 }
 /* ACTIVATED NAV CODE BELOW */
@@ -93,19 +97,11 @@ ul > a:hover {
 }
 
 
-.activated > ul {
-    padding-right: 2rem;
-    list-style: none;
-   
-position: relative;
-    
-    
-  
-}
-.activated > ul > a {
+.activated > a {
     background-color: #da9f5b;
     position: relative;
     display: flex;
+    margin-right: 2rem;
     justify-content: center;
 height: 100%;
     width: 100%;
@@ -119,7 +115,7 @@ width: 6rem;
 height: 2.25rem;
 font-size: 0.75rem;
 font-weight: 500;
-
+font-family: "baloo 2", sans-serif;
 
 padding: .75rem 1.2rem;
 text-align: center;

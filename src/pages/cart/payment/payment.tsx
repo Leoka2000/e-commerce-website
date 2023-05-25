@@ -129,7 +129,7 @@ const Payment = () => {
           {errors.card && <p className='error'>kér kurva</p>}
         </div>
        
-        <button className='btn-submit' type='submit'>Nyújtani?</button>
+        <button className='btn-submit' type='submit'>Benyújtása</button>
       </div>
 
     </form>

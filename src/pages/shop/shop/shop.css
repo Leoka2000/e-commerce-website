@@ -1,6 +1,7 @@
 
 .shop-section {
     padding: 3rem 0 5rem 0;
+    
 
 }
 
@@ -10,6 +11,7 @@
     padding-left: 9rem;
     font-weight: 900;
     font-size: 2rem;
+    font-family: "baloo 2", sans-serif;
 }
 /* Shop section */
 .shop-parent-wrapper {
@@ -74,6 +76,7 @@ font-size: 1.05rem;
  .inputs-wrapper > p {
   padding-bottom: 0.28rem;
   color: rgb(39, 34, 33);
+ 
  }
 
  .roast {
@@ -93,6 +96,7 @@ margin-bottom: 1rem;
 font-weight: 700;
 border-radius: 999px;
 text-transform: uppercase;
+font-family: "baloo 2", sans-serif;
 padding: 0.25rem 0.5rem;
 color: rgb(196, 127, 23);
 background: rgb(241, 233, 201);
@@ -103,13 +107,18 @@ background: rgb(241, 233, 201);
     font-family: "baloo 2", sans-serif;
     font-weight: 900;
  }
-
+#p-2 {
+  font-family: "baloo 2", sans-serif;
+}
  .bx-middle {
 display: flex;
 flex-direction: column;
  }
  .bx-middle > p {
   color: rgb(141, 134, 134);
+  font-family: "Roboto", sans-serif;
+  line-height: 1.2rm;
+  font-family: 700;
   
  }
  /* FOOTER */
@@ -125,15 +134,19 @@ flex-direction: column;
     display: flex;
     align-items: center;
     gap: 0.2rem;
+  
 }
  .price-product > small {
     color: rgb(141, 134, 134);
-    margin-top: 0.25rem;
+    font-family: "Roboto", sans-serif;;
  }
  .price-product > h2 {
     color: rgb(64, 57, 55);
     font-weight: 900;
     font-size: 1.2rem;
+    font-family: "Baloo 2", sans-serif;
+    
+  
  }
 
 

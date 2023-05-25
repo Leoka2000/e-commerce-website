@@ -39,7 +39,7 @@ const Product: React.FC<Props> = (props: Props) => {
         </div>
         <footer className='footer'>
           <div className='price-product'>
-            <small>HUF</small>
+            <small>Ft</small>
             <h2>{price}</h2>
           </div>
           <div className='inputs-wrapper'>

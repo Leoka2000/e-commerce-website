@@ -10,8 +10,8 @@ const Shop = () => {
       <section id='shop' className='shop-section'>
         <h1>Kávéink</h1>
         <div className='shop-parent-wrapper'>
-          {PRODUCTS.map((product, key) => (
-            <Product key={key} data={product} /> 
+          {PRODUCTS.map((product) => (
+            <Product data={product} /> 
           ))}
         </div>
       </section>

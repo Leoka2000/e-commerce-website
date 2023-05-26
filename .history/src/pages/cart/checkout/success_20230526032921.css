@@ -103,7 +103,7 @@ border-radius: 6px 36px;
 }
 @media screen and (min-width: 1400px) {
     .checkout-section {
-        gap: 12rem;
+        
         justify-content: center;
     }
 }

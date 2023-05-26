@@ -39,6 +39,7 @@ const Payment = () => {
 
 
   const onSubmit = (data: PaymentFormData) => {
+    console.log(data)
     navigate("/success", { replace: false, state: { data } })
 
 

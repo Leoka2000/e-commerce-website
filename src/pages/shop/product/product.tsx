@@ -15,10 +15,8 @@ type Props = {
 }
 
 const Product: React.FC<Props> = (props: Props) => {
-  const { id, productName, price, productImage, description, roast } = props.data; // getting the data from the useContext hook
-  const { addToCart, cartItems, removeFromCart} = useContext<ContextProps>(ShopContext); // using the IMPORTED context through useContext hook. On the context component we previously imported the create context
- 
-
+  const { id, productName, price, productImage, description, roast } = props.data; 
+  const { addToCart, cartItems, removeFromCart} = useContext<ContextProps>(ShopContext);
   const cartItemCount: number = cartItems[id];
   
 

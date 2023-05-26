@@ -15,16 +15,27 @@ export const ShopContext = createContext<ContextProps>(
 ); 
 
 const getDefaultCart = (): number[] => {
-  const cart: number[] = [];
-  for (let i = 1; i < PRODUCTS.length + 1; i++) {
-    cart[i] = 0;
+  const storedCart = localStorage.getItem('cart'); // using browser storage so that whem we refresh the page, the browser does not reset all values
+  if (storedCart) {
+    return JSON.parse(storedCart);
+  } else {
+    const cart: number[] = [];
+    for (let i = 1; i < PRODUCTS.length + 1; i++) {
+      cart[i] = 0;
+    }
+    return cart;
   }
-  return cart;
-}
+};
+
 
 export const ShopContextProvider = ({ children }: { children: ReactNode }) => {
   const [cartItems, setCartItems] = useState<number[]>(getDefaultCart());
 
+  useEffect(() => {
+    localStorage.setItem('cart', JSON.stringify(cartItems));
+  }, [cartItems]);
+  
+  
   const getTotalCartAmount = (): number => { 
     let totalAmount = 0;
     for (const item in cartItems) {

@@ -8,7 +8,7 @@
 .shop-section >h1 {
     color: rgb(64, 57, 55);
     text-align: start;
-    padding-left: 9rem;
+    padding-left: 11rem;
     font-weight: 900;
     font-size: 2rem;
     font-family: "baloo 2", sans-serif;
@@ -28,6 +28,7 @@ margin-top: 5rem;
 width: 100%;
 display: flex;
 flex-direction: column;
+border: rgb(235, 227, 215) 1px solid;
 -moz-box-align: center;
 align-items: center;
 text-align: center;
@@ -42,7 +43,6 @@ transition: 0.3s;
 }
 .content-wrapper:hover {
   background-color: #e9e9e9;
-  transform: translateY(-5px);
   box-shadow: 0 14px 28px rgba(0, 0, 0, 0.15), 0 10px 10px rgba(0, 0, 0, 0.15);
  
 }
@@ -149,46 +149,15 @@ flex-direction: column;
   
  }
 
-
- 
-
-/* CSS */
-/*.product-btn {
-  background: linear-gradient(to bottom right,  #DA9F5B, #FF9A5A);
-  border: 0;
-  border-radius: 4px;
-  color: #FFFFFF;
-  cursor: pointer;
-  display: inline-block;
- 
-  font-size: 13px;
-  width: 6rem;
-  height: 2rem;
-  font-weight: 500;
- 
-  outline: transparent;
- 
-  text-align: center;
-  text-decoration: none;
-  transition: box-shadow .2s ease-in-out;
-  user-select: none;
-  -webkit-user-select: none;
-  touch-action: manipulation;
-  white-space: nowrap;
-}
-*/
-/* .product-btn:not([disabled]):focus { */
-  /* box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgb(196, 127, 23), .125rem .125rem 1rem rgba(255, 154, 90, 0.5); */
-/* } */
-
-/* .product-btn:not([disabled]):hover { */
-  /* box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(168, 187, 0, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5); */
-/* } */
 @media screen and (max-width: 1180px) {
     .coin-page-wrapper {
       width: 45%;
       font-size: 0.83rem;
     } 
+    .shop-section >h1 {
+   padding-left: 0rem;
+   text-align: center;
+  }
     
 } 
 

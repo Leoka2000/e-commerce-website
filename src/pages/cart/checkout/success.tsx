@@ -28,14 +28,14 @@ const Success = () => {
            <CiLocationOn id='id-1'/>
             <div>
               <p>Kiszállítva  {state.data.addressName}, {state.data.addressNumber}</p>
-              <p >Brazilia - UF</p>
+              <p >{state.data.city}, {state.data.neighbourhood}</p>
             </div>
           </div>
           <div className='individual-wrapper'>
           <BiTimer id='id-2'/>
             <div>
               <p>Előrejelzett szállítás</p>
-              <p>20 min - 30 min</p>
+              <p>20 perc - 30 perc</p>
             </div>
           </div>
           <div className='individual-wrapper'>

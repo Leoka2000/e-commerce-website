@@ -50,19 +50,19 @@ font-family: "baloo 2", sans-serif;
 .addToCartBttn {
     background-color: #da9f5b;
     border: 1px solid transparent;
-    border-radius: .50rem;
+    border-radius: 5px;
     box-sizing: border-box;
     color: #fff;
     cursor: pointer;
     flex: 0 0 auto;
-    width: 10rem;
+    width: 11rem;
     font-size: 1rem;
     font-weight: 500;
     line-height: 1.5rem;
   margin-top: 2rem;
-    padding: .75rem 1.2rem;
+    padding: 0.6rem 1.2rem;
     text-align: center;
-    transition: 0.3s;
+    transition: 0.2s;
     font-family: "baloo 2", sans-serif;
     
 }

@@ -21,9 +21,9 @@ export const CartProduct: React.FC<Props> = (props: Props) => {
   const shouldRender = Object.values(cartItems).every(item => item >= 0);
 
   if (!shouldRender) {
-    return null; // Render nothing if any item is less than 0
+    return null; 
   }
-console.log(cartItems)
+
   return (
     <div className='cart-parent-wrapper'>
       <div className='left'>

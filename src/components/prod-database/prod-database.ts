@@ -24,15 +24,15 @@ export interface Product {
 export const PRODUCTS: Product[] = [
   {
     id: 1,
-    productName: "Americano",
-    roast: "Világos pörkölés",
+    productName: "Amerikano",
+    roast: "Sötét pörkölés",
     description: "Hagyományos eszpresszó fele-fele gőzölt tejjel!",
     price: 399.99,
     productImage: Americano,
   },
   {
     id: 2,
-    productName: "Expresso Americano",
+    productName: "Eszpresszó Amerikano",
     roast: "Sötét pörkölés",
     description: "Hígított eszpresszó, kevésbé intenzív, mint a hagyományos",
     price: 399.99,
@@ -57,7 +57,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 5,
     productName: "Tejes Kávé",
-    roast: "Sötét pörkölés",
+    roast: "Világos pörkölés",
     description: "Hagyományos eszpresszó fele-fele gőzölt tejjel!",
     price: 459.99,
     productImage: Leite,
@@ -81,7 +81,7 @@ export const PRODUCTS: Product[] = [
   {
     id: 8,
     productName: "Macchiato",
-    roast: "Sötét pörkölés",
+    roast: "Világos pörkölés",
     description: "Eszpresszó kávé némi forró tejjel és tejhabbal keverve",
     price: 499.99,
     productImage: Macchiato,

@@ -22,12 +22,12 @@ export interface PaymentFormData {
 
 
 const Payment = () => {
-  const { cartItems, getTotalCartAmount } = useContext(ShopContext); 
+  const { cartItems, getTotalCartAmount } = useContext(ShopContext);
   const amountToPay = getTotalCartAmount();
-  
+
 
   let navigate = useNavigate();
-  
+
   const {
     register,
     handleSubmit,
@@ -35,16 +35,16 @@ const Payment = () => {
     formState: { errors },
   } = useForm<PaymentFormData>()
 
- 
-   
+
+
 
   const onSubmit = (data: PaymentFormData) => {
-  console.log(data)
-    navigate("/success", { replace: false, state: {data}})
-    
-    
+    console.log(data)
+    navigate("/success", { replace: false, state: { data } })
+
+
   };
-  
+
 
   return (
     <form onSubmit={handleSubmit(onSubmit)} className='payment-parent'>
@@ -57,29 +57,28 @@ const Payment = () => {
       </header>
       <div className='input-wrapper-parent'>
 
-        <input {...register("addressName", { required: true, minLength: 2 })} placeholder='Cím?'></input>
-        {errors.addressName && <p className='error'>kér kurva</p>}
+        <input {...register("addressName", { required: true, minLength: 2 })} placeholder='Cím'></input>
+        {errors.addressName && <p className='error'>Kérjük, adjon meg egy címet</p>}
 
-        <input {...register("zipCode", { required: true, minLength: 2 })} type="text" placeholder='Cím Kód'></input>
-        {errors.zipCode && <p className='error'>kér kurva</p>}
+        <input {...register("zipCode", { required: true, minLength: 2 })} type="text" placeholder='Cím kód'></input>
+        {errors.zipCode && <p className='error'>Kérjük, adjon meg egy cím kódot</p>}
         <div className='input-wrapper-child'>
           <div>
-            <input {...register("addressNumber", { required: true, minLength: 2 })} placeholder='Lakás Száma' type='number'></input>
-            {errors.addressNumber && <p className='error'>kér kurva</p>}
+            <input {...register("addressNumber", { required: true, minLength: 2 })} placeholder='Lakás száma' type='number'></input>
+            {errors.addressNumber && <p className='error'>Kérjük, adjon meg egy lakás számát</p>}
           </div>
           <div>
-            <input {...register("streetComplement", { required: true, minLength: 2 })} placeholder='Kiegészítés' type='text'></input>
-            {errors.streetComplement && <p className='error'>kér kurva</p>}
+            <input {...register("streetComplement")} placeholder='Kiegészítés (Választható)' type='text'></input>
           </div>
         </div>
         <div className='input-wrapper-child'>
           <div>
             <input {...register("neighbourhood", { required: true, minLength: 2 })} placeholder='Szomszédság' type='text'></input>
-            {errors.neighbourhood && <p className='error'>kér kurva</p>}
+            {errors.neighbourhood && <p className='error'>Kérjük, adjon meg egy szomszédságot</p>}
           </div>
           <div>
             <input {...register("city", { required: true, minLength: 2 })} placeholder='Város' type='text'></input>
-            {errors.city && <p className='error'>kér kurva</p>}
+            {errors.city && <p className='error'>Kérjük, adjon meg egy várost</p>}
           </div>
         </div>
       </div>
@@ -94,41 +93,44 @@ const Payment = () => {
         <main className='main-credit'>
           <div className='main-credit-child'>
             <h4>Összes tétel</h4>
-            <p>{Math.round(amountToPay)}HUF</p>
+            <p>{Math.round(amountToPay)}Ft</p>
           </div>
           <div className='main-credit-child'>
             <h4>Házhozszállítás</h4>
-            <p>890HUF</p>
+            <p>890Ft</p>
           </div>
           <div className='main-credit-child'>
             <h4>Összesen </h4>
-            <p>{Math.round(amountToPay) + 890} HUF</p>
+            <p>{Math.round(amountToPay) + 890}Ft</p>
           </div>
         </main>
         <div className='input-parent' >
-          {/* Add the type='button' in order to stop the button from submitting the form*/}
-          <label placeholder='Hitelkártya' {...register("card")} className='input-wrapper'>
-            <span><AiOutlineCreditCard /></span>
-            <p>Hitelkártya</p>
-            <input {...register("card")} value='Hitelkártya'  type={"radio"} ></input>
-          </label>
-          {errors.card && <p className='error'>kér kurva</p>}
-          <label  placeholder='Bankkártya' {...register("card")} className='input-wrapper'>
-            <span><BsBank/></span>
-            <p>Bankkártya</p>
-            <input {...register("card")} value='Bankkártya' type={"radio"} ></input>
-
-          </label>
-          {errors.card && <p className='error'>kér kurva</p>}
-          <label placeholder='Kézpénz' className='input-wrapper'>
-            <span><FaRegMoneyBillAlt /></span>
-            <p>Kézpénz</p>
-            <input {...register("card")} value='Kézpénz'  type={"radio"}  placeholder='Kézpénz'></input>
-
-          </label>
-          {errors.card && <p className='error'>kér kurva</p>}
+          <div className='label-parent'>
+            <label placeholder='Hitelkártya' className='input-wrapper'>
+              <span><AiOutlineCreditCard /></span>
+              <p>Hitelkártya</p>
+              <input {...register("card", { required: true })} value='Hitelkártya' type={"radio"} ></input>
+            </label>
+            {errors.card && <p className='error'>Kérjük, adjon meg egy opciót</p>}
+          </div>
+          <div className='label-parent'>
+            <label placeholder='Bankkártya' className='input-wrapper'>
+              <span><BsBank /></span>
+              <p>Bankkártya</p>
+              <input {...register("card", { required: true })} value='Bankkártya' type={"radio"} ></input>
+            </label>
+            {errors.card && <p className='error'>Kérjük, adjon meg egy opciót</p>}
+          </div>
+          <div className='label-parent'>
+            <label placeholder='Kézpénz' className='input-wrapper'>
+              <span><FaRegMoneyBillAlt /></span>
+              <p>Kézpénz</p>
+              <input {...register("card", { required: true })} value='Kézpénz' type={"radio"} placeholder='Kézpénz'></input>
+            </label>
+            {errors.card && <p className='error'>Kérjük, adjon meg egy opciót</p>}
+          </div>
         </div>
-       
+
         <button className='btn-submit' type='submit'>Benyújtása</button>
       </div>
 

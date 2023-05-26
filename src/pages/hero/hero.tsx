@@ -10,7 +10,7 @@ const Hero = () => {
         <h1>KÁVÉT</h1>
         <h4>*1442 óta*</h4>
         <LinkRoll to="shop" spy={true} smooth={true} offset={-100} duration={500}>
-          <button className='addToCartBttn'>Most vásárolj!</button>
+          <button className='addToCartBttn'>Most vásároljon!</button>
         </LinkRoll>
       </div>
     </div>

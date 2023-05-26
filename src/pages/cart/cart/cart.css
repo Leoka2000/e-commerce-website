@@ -140,9 +140,7 @@ background-color: rgb(235, 227, 215);
 
       width: 90%; 
     } 
-    .img-wrapper {
-        margin-top: -1.25rem;
-    }
+    
 }
 
 @media screen and (max-width: 600px) {
@@ -156,6 +154,7 @@ background-color: rgb(235, 227, 215);
         display: flex;
         flex-direction: column;
         align-items: center;
+        margin-bottom: 2rem;
         text-align: center;
         border-radius: 6px 36px;
         padding: 0px 1.25rem 1.25rem;
@@ -184,5 +183,8 @@ background-color: rgb(235, 227, 215);
     }
     .left-column > div {
        margin-bottom: 0.7rem;
+}
+.img-wrapper {
+    margin-top: -1.25rem;
 }
 } 
